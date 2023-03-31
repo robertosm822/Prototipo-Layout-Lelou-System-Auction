@@ -1,9 +1,15 @@
 # starter-express-api
 
 This is the simplest possible nodejs api using express that responds to any request with: 
+```json
+{
+  "data": "Teste de API"
+}
 ```
-Yo!
-```
+
+## Public URL
+
+    - https://odd-erin-gosling.cyclic.app/
 
 ### Deploy it in 7 seconds: 
 
