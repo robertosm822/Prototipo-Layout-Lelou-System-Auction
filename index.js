@@ -11,7 +11,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'views')));
 
-import  indexRouter from './routes/audictorRoutes.js';
+import  homeRouters from './routes/audictorRoutes.js';
+import adminRouters from './routes/adminRouters.js';
 
 //template engine
 nunjucks.configure('views', {
@@ -19,8 +20,8 @@ nunjucks.configure('views', {
     express:  app
   });
 
-app.use('/', indexRouter)
-//app.use('/users', usersRouter)
+app.use('/', homeRouters)
+app.use('/admin/', adminRouters)
 
 app.all('/api/', (req, res) => {
     console.log("Just got a request!")
