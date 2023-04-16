@@ -1,9 +1,8 @@
-const express = require('express');
-const  nunjucks = require('nunjucks');
-const path = require('path');
+import express from 'express';
+import  nunjucks from 'nunjucks';
+import path from 'path';
 
-
-const bodyParser = require('body-parser');
+import bodyParser from 'body-parser';
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

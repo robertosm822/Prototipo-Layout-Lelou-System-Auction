@@ -37,4 +37,4 @@ router.get('/contato', async  function(req, res, next) {
     res.render('contact.njk', data);
 });
 
-module.exports = router
+export default router;
