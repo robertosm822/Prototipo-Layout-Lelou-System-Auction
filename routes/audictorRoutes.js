@@ -19,4 +19,22 @@ router.get('/registrar-se', async  function(req, res, next) {
     res.render('register.njk', data);
 });
 
+router.get('/entrar', async  function(req, res, next) {
+    let  data = {
+      message: '',
+      layout:  'layout.njk',
+      title: ''
+    }  
+    res.render('login.njk', data);
+});
+
+router.get('/contato', async  function(req, res, next) {
+    let  data = {
+      message: '',
+      layout:  'layout.njk',
+      title: ''
+    }  
+    res.render('contact.njk', data);
+});
+
 module.exports = router
