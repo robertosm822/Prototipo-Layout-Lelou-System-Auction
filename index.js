@@ -1,18 +1,24 @@
 const express = require('express');
+const  nunjucks = require('nunjucks');
+const path = require('path');
+
+
 const bodyParser = require('body-parser');
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname, 'views')));
+
+const  indexRouter = require('./routes/audictorRoutes.js')
+
 //template engine
-app.set('view engine', 'ejs');
-app.set('views', './views');
+nunjucks.configure('views', {
+    autoescape:  true,
+    express:  app
+  });
 
-
-//routes with views
-app.get('/', (req, res) => {
-    res.render('home');
-});
+app.use('/', indexRouter)
+//app.use('/users', usersRouter)
 
 app.all('/api/', (req, res) => {
     console.log("Just got a request!")
