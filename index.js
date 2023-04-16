@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
-app.all('/', (req, res) => {
+app.all('/api/', (req, res) => {
     console.log("Just got a request!")
     res.send({"data": "Teste de API"})
 });
