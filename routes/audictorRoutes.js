@@ -37,13 +37,13 @@ router.get('/contato', async  function(req, res, next) {
     res.render('contact.njk', data);
 });
 
-router.get('/sobre', async  function(req, res, next) {
+router.get('/faqs', async  function(req, res, next) {
     let  data = {
       message: '',
       layout:  'layout.njk',
       title: ''
     }  
-    res.render('aboult.njk', data);
+    res.render('faqs.njk', data);
 });
 
 export default router;
