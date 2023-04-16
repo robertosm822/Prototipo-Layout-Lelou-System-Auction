@@ -7,6 +7,7 @@ app.use(bodyParser.json());
 //template engine
 app.set('view engine', 'ejs');
 app.set('views', './views');
+app.use(express.static(__dirname + '/public'));
 
 //routes with views
 app.get('/', (req, res) => {
