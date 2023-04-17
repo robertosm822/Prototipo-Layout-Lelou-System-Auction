@@ -55,4 +55,11 @@ router.get('/faqs', async  function(req, res, next) {
     res.render('faqs.njk', data);
 });
 
+router.get('/404', async function (req, res, next){
+  const data = {
+    layout: ''
+  };
+  res.render('404-error.njk', data);
+});
+
 export default router;
