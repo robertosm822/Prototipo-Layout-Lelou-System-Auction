@@ -1,4 +1,4 @@
-# starter-express-api
+# Software Prototyping Auction
 
 This is the simplest possible nodejs api using express that responds to any request with: 
 ```json
