@@ -22,4 +22,11 @@ router.get('/profile', async  function(req, res, next) {
     res.render('admin/profile.njk', data);
 });
 
+router.get('/meus-lances', async  function(req, res, next) {
+    let  data = {
+      layout:  'layout.njk',
+    }  
+    res.render('admin/admin-my-bids.njk', data);
+});
+
 export default router;
